@@ -5,21 +5,21 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Login from './Components/Login/Login';
-import {UserStorege} from './UserContext.js'
+import { UserStorage } from './UserContext';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <UserStorege>
+        <UserStorage>
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login/*" element={<Login />} />
           </Routes>
           <Footer />
-          </UserStorege>
-        </BrowserRouter>
+        </UserStorage>
+      </BrowserRouter>
     </div>
   );
 }
